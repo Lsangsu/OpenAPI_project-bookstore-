@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirley</title>
+
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common(250904).css">
+    <link rel="stylesheet" href="./css/index(250904).css">
+
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="topMenu">
+                <div class="logo">
+                    <img src="//shirley-demo.myshopify.com/cdn/shop/files/logoshirley_300x.png?v=1613554226" alt="">
+                </div>
+                <div class="search"></div>
+                <div class="mypage"></div>
+            </div>
+        </div>
+        <nav>
+            <div class="navMenu">
+                <ul class>
+                    <li>Home</li>
+                    <li>Books</li>
+                    <li>Magazines</li>
+                    <li>Textbooks</li>
+                    <li>Recomended</li>
+                    <li>Sale</li>
+                    <li>Pages</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="slider">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="middleMenu middle"></div>
+    <div class="middleImg middle"></div>
+    <div class="slideProduct middle"></div>
+    <div class="slideVanner"></div>
+    <div class="Product middle"></div>
+    <div class="saleVanner"></div>
+    <div class="slideProduct middle"></div>
+    <div class="personVanner"></div>
+    <div class="latestBlogs middle"></div>
+    <div class="bottomMenu middle"></div>
+
+
+    <footer>
+        <div class="bottom">
+            <div class="b_left"></div>
+            <div class="b_center"></div>
+            <div class="b_right"></div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {});
+    </script>
+</body>
+</html>

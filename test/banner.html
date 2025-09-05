@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>슬라이더 버튼으로 제어</title>
+  <style>
+    .slider-wrapper {
+      width: 300px;
+      overflow: hidden;
+      border: 2px solid #333;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 300px;
+      height: 150px;
+      background-color: lightcoral;
+      color: white;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .controls {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-wrapper">
+    <div class="slider" id="slider">
+      <div class="slide">배너 1</div>
+      <div class="slide">배너 2</div>
+      <div class="slide">배너 3</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="prevBtn">이전</button>
+    <button id="nextBtn">다음</button>
+  </div>
+
+  <script>
+    const slider = document.getElementById('slider');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+
+    let currentIndex = 0;
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+        slider.style.transform = `translateX(-${300 * currentIndex}px)`;
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        slider.style.transform = `translateX(-${300 * currentIndex}px)`;
+      }
+    });
+
+    
+  </script>
+
+</body>
+</html>
