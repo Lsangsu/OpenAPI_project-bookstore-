@@ -2,6 +2,7 @@
 
 @charset "utf-8";
 .middle {margin:0 auto;}
+.content_middle {display: flex; align-items: center; justify-content: center;}
 
 /* slider */
 .swiper {
@@ -24,27 +25,54 @@
     object-fit: cover;
 }
 
+/* first slider */
+.swiper mySwiper{position: relative;}
+#slider {width: 100%; height: 600px;  background-color: #F4F8FB; margin-top: 21px;}
+.txtContainer {width:600px; height: 100%; text-align: left; display: flex; align-items: center;}
+.ani_txt_box {width: 100%; height: 300px;display: flex; flex-wrap: wrap; align-content:space-around;}
+.ani_img_box {width:600px; height: 100%;}
+.shopButton {width:155px; height: 50px; background: none; color: black;}
+.shopButton:hover {background-color: #62ab00; color: white; transition: all 0.5s; border: none;}
+.slide_button {position: absolute; left: 5%; top:70%; width: 50px; height: 90px; z-index: 9999999;}
+#buttonRight {width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray; display: flex; align-items: center; justify-content: center; font-size: 20px;}
+#buttonRight:hover {background-color: #62ab00; cursor: pointer;}
+#buttonLeft {width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-top: 10px;}
+#buttonLeft:hover {background-color: #62ab00; cursor: pointer;}
 
-#slider {width: 100%px; height: 475px;  background-color: #F4F8FB;}
-/* .s_main {
-    width: 1200px; height: 475px; background-color: #F4F8FB; display: flex; 
-} */
 
+/* introduce */
+.introduce {width: 1200px; height: 200px; display: flex; justify-content: space-evenly; align-items: center;}
+.icon_box {width: 290px; height: 80px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;} 
+.icon_box img {width: 65px; height: 65px;}
 
-.middleMenu {width: 1200px; height: 190px; background-color: aqua;}
+/* twoCut */
+.twoCut {width: 1200px; height: 280px;display: flex; justify-content: space-evenly; align-items: center;}
+.twoCut_box{width: 570px; height: 240px; overflow: hidden; position: relative;}
+.twoCut_text{position: absolute; left: 40px; top: 30px; color: white;}
+.twoCut_text p {font-size: 18px;}
+.twoCut_text h1 {margin-bottom: 10px;}
+.twoCut_text a {font-size: 18px; color: white; text-decoration: underline;}
+.twoCut_text a:hover {font-size: 18px; color: #62ab00}
+.twoCut_box img:hover {scale: 1.1; transition: all 0.5s ease 0s;}
 
-.middleImg {width: 1200px; height: 195px; background-color: gold;}
+/* bookList */
+.bookList {width: 1200px; height: 570px;}
+.bookList_title {width: 1200px; height: 45x; display: flex; justify-content: space-between; align-items: center; margin-top: 40px;}
+.bookList_box {width: 1200px; height: 540px; display: flex; justify-content: space-around; align-items: center;}
+.bookList_book_box{width: 270px; height: 420px; border: 1px solid gainsboro}
+.bookList_img {width: 270px; height: 268px;display: flex; justify-content: center; margin: 10px 0;}
+.bookList_img img{width:160px; height:240px; border-radius: 5px; box-shadow: 2px 1px 10px gray;}
+.bookList_text {width: 240px; height: 120px; margin: 10px 15px;}
+.bookList_text span i{color: gold;}
 
-.slideProduct {width: 1200px; height: 500px; background-color: aqua;}
-
-.middleSlide {width: 100%; height: 385px; background-color: gold;}
-
-.Product {width: 1200px; height: 500px; background-color: aqua;}
-
-.saleVanner {width: 100%; height: 550px; background-color: gold;}
-
-.personVanner {width: 100%; height: 370px; background-color: cyan;}
-
-.latestBlogs {width: 1200px; height: 580px; background-color: gold;}
-
-.bottomMenu {width: 1200px; height: 29px; background-color: cyan;}
+/* second slider */
+#slider {width: 100%; height: 510px;  background-color: #F4F8FB; margin-top: 21px;}
+.S_S_box {width: 635px; height: 510px; position: relative;}
+.S_S_container1 {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(124, 149, 170, 0.9)} 
+.S_S_container1 div img{width: 253px; height: 370px;} 
+.S_S_container2 {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(120, 121, 125, 0.9)} 
+.S_S_container2 div img{width: 253px; height: 370px;} 
+.S_S_container3 {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(86, 131, 139, 0.9)} 
+.S_S_container3 div img{width: 253px; height: 370px;} 
+.S_S_container4 {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(130, 167, 232, 0.9)} 
+.S_S_container4 div img{width: 253px; height: 370px;} 

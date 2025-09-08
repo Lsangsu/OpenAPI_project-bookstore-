@@ -9,71 +9,385 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- css -->
-    <link rel="stylesheet" href="./css/common(250904).css">
-    <link rel="stylesheet" href="./css/index(250904).css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/27fd60e7f1.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+    <!-- header -->
     <header>
         <div class="top">
             <div class="topMenu">
                 <div class="logo">
-                    <img src="//shirley-demo.myshopify.com/cdn/shop/files/logoshirley_300x.png?v=1613554226" alt="">
+                    <a href="#"><img src="./img/logoshirley.png" alt="logo"></a>
                 </div>
-                <div class="search"></div>
-                <div class="mypage"></div>
+                <div class="search">
+                    <input type="search" class="In_Search" placeholder="Search our store">
+                    <div class="In_S_btn">
+                        <i class="fa-solid fa-magnifying-glass" style="font-size: 23px; color: white;"></i>
+                    </div>
+                </div>
+                <div class="sideMenu">
+                    <i class="fa-solid fa-bag-shopping" style="color: #62ab00; font-size: 25px;"></i>
+                    <p>$0.00</p>
+                    <i class="fa-solid fa-gear" style="color: black; font-size: 18px; margin-left: 14px;"></i>
+                </div>
             </div>
         </div>
-        <nav>
+        <nav >
             <div class="navMenu">
-                <ul class>
-                    <li>Home</li>
-                    <li>Books</li>
-                    <li>Magazines</li>
-                    <li>Textbooks</li>
-                    <li>Recomended</li>
-                    <li>Sale</li>
-                    <li>Pages</li>
-                </ul>
+                    <ul class>
+                        <li>Home</li>
+                        <li>Books</li>
+                        <li>Magazines</li>
+                        <li>Textbooks</li>
+                        <li>Recomended</li>
+                        <li>Sale</li>
+                        <li>Pages</li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    
+
+
+    <!-- slider -->
     <div id="slider">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">
+                    <div class="txtContainer">
+                        <div class="ani_txt_box">
+                            <h1 style="font-size: 70px; width: 100%;">Yoga Lesson</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua.</p>
+                            <button class="shopButton">
+                                SHOP NOW
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ani_img_box">
+                        <img src="./img/slider1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="txtContainer">
+                        <div class="ani_txt_box">
+                            <h1 style="font-size: 70px; width: 100%;">Child Care Book</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="shopButton">
+                                SHOP NOW
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ani_img_box">
+                        <img src="./img/slider2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="slide_button">
+                <div id="buttonRight">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </div>
+                <div id="buttonLeft">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="middleMenu middle"></div>
-    <div class="middleImg middle"></div>
-    <div class="slideProduct middle"></div>
-    <div class="slideVanner"></div>
-    <div class="Product middle"></div>
-    <div class="saleVanner"></div>
-    <div class="slideProduct middle"></div>
-    <div class="personVanner"></div>
-    <div class="latestBlogs middle"></div>
-    <div class="bottomMenu middle"></div>
-
-
-    <footer>
-        <div class="bottom">
-            <div class="b_left"></div>
-            <div class="b_center"></div>
-            <div class="b_right"></div>
-        </div>
-    </footer>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {});
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: "#buttonRight",
+                prevEl: "#buttonLeft",
+            },
+        });
     </script>
+
+    <!-- introduce -->
+    <div class="introduce middle">
+        <div class="icon_box">
+            <img src="./img/icon01_small.png" alt="icon">
+
+            <div style="width: 210px;">
+                <h2>Quick Delivery</h1>
+                <p>Most product are free shipping.</p>
+            </div>
+        </div>
+        <div class="icon_box">
+            <img src="./img/icon02_small.png" alt="icon">
+            <div style="width: 210px;">
+                <h2>Pay with Easy</h2>
+                <p>Most product are free shipping.</p>
+            </div>
+        </div>
+        <div class="icon_box">
+            <img src="./img/icon03_small.png" alt="icon">
+            <div style="width: 210px;">
+                <h2>Best Deal</h2>
+                <p>Most product are free shipping.</p>
+            </div>
+        </div>
+        <div class="icon_box">
+            <img src="./img/icon04_small.png" alt="icon">
+            <div style="width: 210px;">
+                <h2>Secured Payment</h2>
+                <p>Most product are free shipping.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- twoCut -->
+    <div class="twoCut middle">
+        <div class="twoCut_box">
+            <div>
+                <img src="./img/twocut1.jpg" alt="twoCut_img">
+            </div>
+            <div class="twoCut_text">
+                <p>SPECIAL OFFER</p>
+                <h1>Buy 3.Get <br>1 Free </h1>
+                <a href="#">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="twoCut_box">
+            <div>
+                <img src="./img/twocut2.jpg" alt="twoCut_img">
+            </div>
+            <div class="twoCut_text">
+                <p>$50.00</p>
+                <h1>Praise for<br>The Night Child</h1>
+                <a href="#">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- booklist -->
+    <div class="bookList middle">
+        <div class="bookList_title">
+            <h2>Flash Sale Offer</h2>
+            <a href="#" style="font-size: 18px;">VEIW MORE</a>
+        </div>
+        <div class="bookList_box">
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F540824%3Ftimestamp%3D20250904110238" alt="book1">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type1</span>
+                    <h3>싯다르타</h3>
+                    <h3 style="color: #62ab00;">₩8000</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F5690334%3Ftimestamp%3D20250822135634" alt="book2">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type2</span>
+                    <h3>프랑켄슈타인(무삭제 완역본)</h3>
+                    <h3 style="color: #62ab00;">₩8800</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3579488%3Ftimestamp%3D20241122114223" alt="book3">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type3</span>
+                    <h3>Essentials of M</h3>
+                    <h3 style="color: #62ab00;">₩49000</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3130560%3Ftimestamp%3D20190218000431" alt="book4">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type4</span>
+                    <h3>Physics for Sci</h3>
+                    <h3 style="color: #62ab00;">₩52000</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- second slider -->
+     <div id="slider2">
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="S_S_box">
+                        <img src="./img/swiper_back1.jpg" alt="">
+                    </div>
+                    <div class="S_S_container1 content_middle">
+                        <div>
+                            <img src="./img/swiper4.png" alt="">
+                        </div>
+                        <div>
+                            <h2>Heaven of Life</h2>
+                            <p>AUthor: momenz vong</p>
+                            <p>$120.00</p><p>$150.00</p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="S_S_box">
+                        <img src="./img/swiper_back2.jpg" alt="">
+                    </div>
+                    <div class="S_S_container2">
+                        <div>
+                            <img src="./img/swiper3.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="S_S_box">
+                        <img src="./img/swiper_back3.jpg" alt="">
+                    </div>
+                    <div class="S_S_container3">
+                        <div>
+                            <img src="./img/swiper2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="S_S_box">
+                        <img src="./img/swiper_back4.jpg" alt="">
+                    </div>
+                    <div class="S_S_container4">
+                        <div>
+                            <img src="./img/swiper1.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 3,
+            loop: true,
+            navigation: {
+                nextEl: "#buttonRight",
+                prevEl: "#buttonLeft",
+            },
+        });
+    </script>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_menu">
+            <div class="f_m_1">
+                <a href="#">
+                    <img src="./img/logoshirley.png" alt="footer_logo">
+                </a>
+                <div>
+                    <p style="font-size: 17px; margin-bottom: 30px;">
+                       Subscribe to our newsleter, Enter your emil address 
+                    </p>
+                    <div style="display: flex;">
+                        <input type="email" class="In_Email" placeholder="email@example.com">
+                        <div class="In_E_btn">
+                            <i class="fa-regular fa-paper-plane" style="color: white;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f_m_2">
+                <h3>Account</h3>
+                <div class="f_m_box">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                    <a href="#">My Account</a>
+                </div>
+            </div>
+            <div class="f_m_2">
+                <h3>Footer Menu</h3>
+                <div class="f_m_box">
+                    <a href="#">Search</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Shop</a>
+                </div>
+            </div>
+            <div class="f_m_3">
+                <h3>About Store</h3>
+                <div class="f_m_box">
+                    <p>No. 96, Jecica City, NJ 07305, New York, USA</p>
+                    <div>
+                        <p>Phone: <a href="#">123-456-7890</a></p>
+                        <a href="#">support@wxample.com</a>
+                    </div>
+                    <p>Open Hours: MN - ST: 8:00AM - 9:00PM</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid #e9ecf2;">
+            <div class="bottom">
+                <div class="b_left">
+                    <a href="#" >Facebook</a>
+                    <a href="#" >Twitter</a>
+                    <a href="#" >Linkedin</a>
+                    <a href="#" >Facebook</a>
+                </div>
+                <div class="b_center" style="color: #919191;">
+                    Copyright © All Right Reserved
+                </div>
+                <div class="b_right">
+                    <a href="#">
+                        <img src="./img/footer_card.avif" alt="card_img">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
