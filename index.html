@@ -259,39 +259,56 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="S_S_box">
-                        <img src="./img/swiper_back1.jpg" alt="">
+                        <img src="./img/swiper_back1.jpg" alt="swiper_back">
                     </div>
                     <div class="S_S_container1 content_middle">
                         <div>
-                            <img src="./img/swiper4.png" alt="">
+                            <img src="./img/swiper4.png" alt="swiper_img">
                         </div>
-                        <div>
-                            <h2>Heaven of Life</h2>
-                            <p>AUthor: momenz vong</p>
-                            <p>$120.00</p><p>$150.00</p>
-                            
+                        <div class="S_S_C_text">
+                            <h2>Yoga Lession</h2>
+                            <p>Author : Marcel Brown</p>
+                            <p>$170.00</p><p>$180.00</p>
+                            <button class="shopButton2">
+                                SHOP NOW
+                            </button>
                         </div>
-
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="S_S_box">
                         <img src="./img/swiper_back2.jpg" alt="">
                     </div>
-                    <div class="S_S_container2">
+                    <div class="S_S_container2 content_middle">
                         <div>
-                            <img src="./img/swiper3.png" alt="">
+                            <img src="./img/swiper3.png" alt="swiper_img">
                         </div>
-
+                        <div class="S_S_C_text">
+                            <h2>Heaven of Life</h2>
+                            <p>Author : Momenz Vong</p>
+                            <p>$120.00</p><p>$150.00</p>
+                            <button class="shopButton2">
+                                SHOP NOW
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="S_S_box">
                         <img src="./img/swiper_back3.jpg" alt="">
                     </div>
-                    <div class="S_S_container3">
+                    <div class="S_S_container3 content_middle">
                         <div>
-                            <img src="./img/swiper2.png" alt="">
+                            <img src="./img/swiper2.png" alt="swiper_img">
+                        </div>
+                        <div class="S_S_C_text">
+                            <h2>Jungle Life</h2>
+                            <p>Author : Johurul Miya</p>
+                            <p>$160.00</p>
+                            <p>$190.00</p>
+                            <button class="shopButton2">
+                                SHOP NOW
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -299,27 +316,227 @@
                     <div class="S_S_box">
                         <img src="./img/swiper_back4.jpg" alt="">
                     </div>
-                    <div class="S_S_container4">
+                    <div class="S_S_container4 content_middle">
                         <div>
-                            <img src="./img/swiper1.png" alt="">
+                            <img src="./img/swiper1.png" alt="swiper_img">
                         </div>
+                        <div class="S_S_C_text">
+                            <h2>A New World</h2>
+                            <p>Author : Julojulo Vondos</p>
+                            <p>$120.00</p><p>$150.00</p>
+                            <button class="shopButton2">
+                                SHOP NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
 
+    <script>
+        const swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 2.5,
+            centerSlides : true,
+            spaceBetween : 0,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+    <!-- second booklist -->
+    <div class="bookList middle">
+        <div class="bookList_title">
+            <h2>Most Popular Book</h2>
+            <div class="PopularBook_button_box tab-menu">
+                <button id="button1" class="color-button active"><a href="#tabs-1">TOP RATED BOOKS</a></button>
+                <button id="button2" class="color-button"><a href="#tabs-2"></a>BEST SELLING BOOK</a></button>
+            </div>
+        </div>
+        <div id="tab-content">
+            <div id="tabs-1">
+                <div class="bookList_box">
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F540824%3Ftimestamp%3D20250904110238" alt="book1">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type1</span>
+                            <h3>싯다르타</h3>
+                            <h3 style="color: #62ab00;">₩8000</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F5690334%3Ftimestamp%3D20250822135634" alt="book2">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type2</span>
+                            <h3>프랑켄슈타인(무삭제 완역본)</h3>
+                            <h3 style="color: #62ab00;">₩8800</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3579488%3Ftimestamp%3D20241122114223" alt="book3">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type3</span>
+                            <h3>Essentials of M</h3>
+                            <h3 style="color: #62ab00;">₩49000</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3130560%3Ftimestamp%3D20190218000431"  alt="book4">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type4</span>
+                            <h3>Physics for Sci</h3>
+                            <h3 style="color: #62ab00;">₩52000</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class="bookList_box">
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F1688378%3Ftimestamp%3D20230906151006" alt="book1">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type1</span>
+                            <h3>Visualization</h3>
+                            <h3 style="color: #62ab00;">₩194940</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3321498%3Ftimestamp%3D20230804172050" alt="book2">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type2</span>
+                            <h3>Physics for Sci</h3>
+                            <h3 style="color: #62ab00;">₩52000</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F1706715%3Ftimestamp%3D20230918220439" alt="book3">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type3</span>
+                            <h3>Writing Women</h3>
+                            <h3 style="color: #62ab00;">₩32460</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bookList_book_box">
+                        <div class="bookList_img">
+                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F4881876%3Ftimestamp%3D20230503163533" alt="book4">
+                        </div>
+                        <div class="bookList_text">
+                            <span> ㅡ Type4</span>
+                            <h3>Seven Keys to M</h3>
+                            <h3 style="color: #62ab00;">₩33530</h3>
+                            <span> ㅡ
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 버튼 배경색 변경 -->
     <script>
-        const swiper2 = new Swiper(".mySwiper2", {
-            slidesPerView: 3,
-            loop: true,
-            navigation: {
-                nextEl: "#buttonRight",
-                prevEl: "#buttonLeft",
-            },
+    const buttons = document.querySelectorAll('.color-button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // 모든 버튼에서 active 클래스 제거
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // 클릭한 버튼에 active 클래스 추가
+        button.classList.add('active');
+      });
+    });
+  </script>
+
+  <script>
+        const tabMenu = document.querySelectorAll('.tab-menu button');
+        const tabContent = document.querySelectorAll('#tab-content > div');
+        tabMenu.forEach(function(item, idx){
+            item.addEventListener('click', function(e){
+                e.preventDefault();
+                showContent(idx);
+            });
         });
+        function showContent(num){
+            tabContent.forEach(function(item){
+                item.style.display = 'none';
+            });
+            tabContent[num].style.display = 'block';
+        };
     </script>
+
 
     <!-- footer -->
     <footer>

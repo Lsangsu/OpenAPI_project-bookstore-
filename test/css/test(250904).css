@@ -1,24 +1,20 @@
 /* 세부 css 설정 */
 
 @charset "utf-8";
+.middle {margin:0 auto;}
+.content_middle {display: flex; align-items: center; justify-content: center;}
 
-/* slider */
-.swiper {
-      width: 100%;
-      height: 100%
-}
+/* bookList */
+.bookList {width: 1200px; height: 570px;}
+.bookList_title {width: 1200px; height: 45x; display: flex; justify-content: space-between; align-items: center; margin-top: 40px;}
+.bookList_box {width: 1200px; height: 480px; display: flex; justify-content: space-around; align-items: center;}
+.bookList_book_box{width: 270px; height: 420px; border: 1px solid gainsboro}
+.bookList_img {width: 270px; height: 268px;display: flex; justify-content: center; margin: 10px 0;}
+.bookList_img img{width:160px; height:240px; border-radius: 5px; box-shadow: 2px 1px 10px gray;}
+.bookList_text {width: 240px; height: 120px; margin: 10px 15px;}
+.bookList_text span i{color: gold;}
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.color-button {font-size: 14px; background-color: lightgray; color: black; border: none; cursor: pointer; transition: 0.3s; display: inline-block; padding: 13px 10px;}
+.color-button + .color-button {margin: 0 0 0 10px;}
+.active {background-color: #62ab00; color: white;}

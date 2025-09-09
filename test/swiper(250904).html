@@ -1,79 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
-
-<!-- 스와이퍼 -> Resources -> Demos에서 가져오기 -->
+<html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <title>Swiper demo</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> -->
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirley</title>
 
-  <!-- Demo styles -->
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    body {
-      background: #000;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
+    <!-- css -->
+    <link rel="stylesheet" href="./css/test(250904).css">
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/27fd60e7f1.js" crossorigin="anonymous"></script>
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #444;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
 </head>
-
 <body>
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+    <!-- second booklist -->
+     <div class="bookList middle">
+        <div class="bookList_title">
+            <h2>Most Popular Book</h2>
+            <div class="PopularBook_button_box">
+                <button id="button1" class="color-button active">TOP RATED BOOKS</button>
+                <button id="button2" class="color-button">BEST SELLING BOOK</button>
+            </div>
+        </div>
+        <div id="tab-content">
+          <div id="tabs-1" style="display: none;">
+
+          </div>
+          <div id="tabs-2" style="display: block;">
+
+          </div>
+        </div>
+        <div class="bookList_box">
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F540824%3Ftimestamp%3D20250904110238" alt="book1">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type1</span>
+                    <h3>싯다르타</h3>
+                    <h3 style="color: #62ab00;">₩8000</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F5690334%3Ftimestamp%3D20250822135634" alt="book2">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type2</span>
+                    <h3>프랑켄슈타인(무삭제 완역본)</h3>
+                    <h3 style="color: #62ab00;">₩8800</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3579488%3Ftimestamp%3D20241122114223" alt="book3">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type3</span>
+                    <h3>Essentials of M</h3>
+                    <h3 style="color: #62ab00;">₩49000</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="bookList_book_box">
+                <div class="bookList_img">
+                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3130560%3Ftimestamp%3D20190218000431" alt="book4">
+                </div>
+                <div class="bookList_text">
+                    <span> ㅡ Type4</span>
+                    <h3>Physics for Sci</h3>
+                    <h3 style="color: #62ab00;">₩52000</h3>
+                    <span> ㅡ 
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {});
+    <!-- 버튼 배경색 변경 -->
+    <script>
+    const buttons = document.querySelectorAll('.color-button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // 모든 버튼에서 active 클래스 제거
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // 클릭한 버튼에 active 클래스 추가
+        button.classList.add('active');
+      });
+    });
   </script>
-</body>
 
+  <script>
+        const tabMenu = document.querySelectorAll('.tab-menu li');
+        const tabContent = document.querySelectorAll('#tab-content > div');
+        const highLight = document.querySelector('.highlight');
+
+        tabMenu.forEach(function(item, idx){
+            item.addEventListener('click', function(e){
+                e.preventDefault();
+                showContent(idx);
+                moveHighLight(idx);
+            });
+        });
+        function showContent(num){
+            tabContent.forEach(function(item){
+                item.style.display = 'none';
+            });
+            tabContent[num].style.display = 'block';
+        };
+        function moveHighLight(num){
+            const newLeft = tabMenu[num].offsetLeft;
+            const newWidth = tabMenu[num].offsetWidth;
+            console.log(newWidth);
+            highLight.style.left = newLeft + 'px';
+            highLight.style.width = newWidth + 'px';
+        }
+    </script>
+</body>
 </html>
