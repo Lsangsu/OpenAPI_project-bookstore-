@@ -25,7 +25,7 @@
     object-fit: cover;
 }
 
-/* first slider */
+/* slider */
 .swiper mySwiper{position: relative;}
 #slider {width: 100%; height: 600px;  background-color: #F4F8FB; margin-top: 21px;}
 .txtContainer {width:600px; height: 100%; text-align: left; display: flex; align-items: center;}
@@ -59,13 +59,13 @@
 .bookList {width: 1200px; height: 570px;}
 .bookList_title {width: 1200px; height: 45x; display: flex; justify-content: space-between; align-items: center; margin-top: 40px;}
 .bookList_box {width: 1200px; height: 480px; display: flex; justify-content: space-around; align-items: center;}
-.bookList_book_box{width: 270px; height: 420px; border: 1px solid gainsboro}
-.bookList_img {width: 270px; height: 268px;display: flex; justify-content: center; margin: 10px 0;}
-.bookList_img img{width:160px; height:240px; border-radius: 5px; box-shadow: 2px 1px 10px gray;}
-.bookList_text {width: 240px; height: 120px; margin: 10px 15px;}
-.bookList_text span i{color: gold;}
+.bookList_book_box{width: 270px; height: 420px; border: 1px solid gainsboro; padding: 0 15px;}
+.bookList_book_box img{width:160px; height:220px; border-radius: 5px; box-shadow: 2px 1px 10px gray; margin:10px 40px 20px;}
+.bookList_book_box p{margin-top: 10px;}
+.bookList_book_box h3{font-size:20px; color:black; text-decoration:line-through; float: left; margin-top: 10px;}
+.bookList_book_box h3:nth-of-type(2){font-size:20px; color:#62ab00; text-decoration: none; margin-left: 20px;}
 
-/* second slider */
+/* slider2 */
 #slider2 {width: 100%; height: 510px;  background-color: #F4F8FB; margin-top: 21px;}
 .S_S_box {width: 635px; height: 510px; position: relative;}
 .S_S_container1 {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(124, 149, 170, 0.9)} 
@@ -80,8 +80,36 @@
 .shopButton2:hover {background-color: #62ab00; color: white; transition: all 0.5s; border: none; cursor: pointer;}
 
 
+/* Second bookList */
 .color-button {font-size: 14px; background-color: lightgray; color: black; border: none; cursor: pointer; transition: 0.3s; display: inline-block; padding: 13px 10px;}
 .color-button + .color-button {margin: 0 0 0 10px;}
 .active {background-color: #62ab00; color: white;}
 #tab-content > div{display: none;}
 #tab-content > div:first-child{display: block;}
+
+/* slider3 */
+.slider3_container {width: 100%; height: 790px; background-image: url("../img/time_back.jpg"); position: relative; display: flex; justify-content: center; align-items: center;}
+.slider3_back {position: absolute; left:0; top:0; width:100%; height:100%; background-color: rgba(25, 34, 45, 0.9)}
+.slider3_content {position: absolute; width: 1200px; height: 550px; display: flex; align-items: center; justify-content: space-around;}
+.slider3_content_text {width: 670px; height: 350px; color: white;
+display: flex; flex-wrap: wrap; align-content: space-between;}
+.slider3_Time div {width:160px; height: 85px; padding: 10px 25px; border: 2px solid white; text-align: center; border-top: 0; border-bottom: 0; float: left;}
+.shopButton3 {background: none; color: white; border:2px solid white; padding: 15px 25px; margin-top: 20px;}
+.shopButton3:hover {background-color: #62ab00; color: white; border: none; transition: all 0.5s;}
+
+#slider3 {width: 470px; height: 545px;}
+.slide_button2 {font-size: 30px; pointer-events: none; opacity: 0; transition: opacity 0.3s ease;}
+#buttonLeft2 {pointer-events: all; width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray;  position: absolute; left: 0%; top:50%; z-index: 9999999; text-align: center; cursor: pointer;}
+#buttonRight2 {pointer-events: all;width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray;  position: absolute; right: 0%; top:50%; z-index: 9999999; text-align: center; cursor: pointer;}
+
+#slider3:hover .slide_button2 {
+    opacity: 1;
+}
+
+/* slider4 */
+.slider4_container {width: 100%; height: 465px; background-image: url("../img/person.png"); position: relative;}
+.slider4_back {position: absolute; left:0; top:0; width:100%; height:100%; background-color: rgba(25, 34, 45, 0.9)}
+#slider4 {width: 970px; height:275px; background-color: gold; position: absolute;}
+.slider4_content {color: white; width: 970px; height:275px;}
+.slider4_content_img { width: 970px; height: 150px;}
+#person_img {width:100px; height:100px; border-radius: 50%;}

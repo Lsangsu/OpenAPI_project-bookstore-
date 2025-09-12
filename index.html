@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
 
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/27fd60e7f1.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <!-- header -->
@@ -53,8 +50,7 @@
         </nav>
     </header>
 
-
-    <!-- slider -->
+    <!-- slider1 -->
     <div id="slider">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -99,22 +95,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        const swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            navigation: {
-                nextEl: "#buttonRight",
-                prevEl: "#buttonLeft",
-            },
-        });
-    </script>
 
     <!-- introduce -->
     <div class="introduce middle">
@@ -173,7 +153,6 @@
         </div>
     </div>
 
-
     <!-- booklist -->
     <div class="bookList middle">
         <div class="bookList_title">
@@ -181,79 +160,14 @@
             <a href="#" style="font-size: 18px;">VEIW MORE</a>
         </div>
         <div class="bookList_box">
-            <div class="bookList_book_box">
-                <div class="bookList_img">
-                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F540824%3Ftimestamp%3D20250904110238" alt="book1">
-                </div>
-                <div class="bookList_text">
-                    <span> ㅡ Type1</span>
-                    <h3>싯다르타</h3>
-                    <h3 style="color: #62ab00;">₩8000</h3>
-                    <span> ㅡ 
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="bookList_book_box">
-                <div class="bookList_img">
-                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F5690334%3Ftimestamp%3D20250822135634" alt="book2">
-                </div>
-                <div class="bookList_text">
-                    <span> ㅡ Type2</span>
-                    <h3>프랑켄슈타인(무삭제 완역본)</h3>
-                    <h3 style="color: #62ab00;">₩8800</h3>
-                    <span> ㅡ 
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="bookList_book_box">
-                <div class="bookList_img">
-                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3579488%3Ftimestamp%3D20241122114223" alt="book3">
-                </div>
-                <div class="bookList_text">
-                    <span> ㅡ Type3</span>
-                    <h3>Essentials of M</h3>
-                    <h3 style="color: #62ab00;">₩49000</h3>
-                    <span> ㅡ 
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="bookList_book_box">
-                <div class="bookList_img">
-                    <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3130560%3Ftimestamp%3D20190218000431" alt="book4">
-                </div>
-                <div class="bookList_text">
-                    <span> ㅡ Type4</span>
-                    <h3>Physics for Sci</h3>
-                    <h3 style="color: #62ab00;">₩52000</h3>
-                    <span> ㅡ 
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </span>
-                </div>
-            </div>
+            <div class="bookList_book_box bookAPI1"></div>
+            <div class="bookList_book_box bookAPI1"></div>
+            <div class="bookList_book_box bookAPI1"></div>
+            <div class="bookList_book_box bookAPI1"></div>
         </div>
     </div>
 
-
-    <!-- second slider -->
+    <!-- slider2 -->
      <div id="slider2">
         <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
@@ -336,170 +250,80 @@
         </div>
     </div>
 
-    <script>
-        const swiper2 = new Swiper(".mySwiper2", {
-            slidesPerView: 2.5,
-            centerSlides : true,
-            spaceBetween : 0,
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
-
-    <!-- second booklist -->
+    <!-- booklist2 -->
     <div class="bookList middle">
         <div class="bookList_title">
             <h2>Most Popular Book</h2>
             <div class="PopularBook_button_box tab-menu">
-                <button id="button1" class="color-button active"><a href="#tabs-1">TOP RATED BOOKS</a></button>
-                <button id="button2" class="color-button"><a href="#tabs-2"></a>BEST SELLING BOOK</a></button>
+                <a href="#tabs-1"><button id="button1" class="color-button active">TOP RATED BOOKS</button></a>
+                <a href="#tabs-2"></a><button id="button2" class="color-button">BEST SELLING BOOK</button></a>
             </div>
         </div>
         <div id="tab-content">
             <div id="tabs-1">
                 <div class="bookList_box">
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F540824%3Ftimestamp%3D20250904110238" alt="book1">
-                        </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type1</span>
-                            <h3>싯다르타</h3>
-                            <h3 style="color: #62ab00;">₩8000</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F5690334%3Ftimestamp%3D20250822135634" alt="book2">
-                        </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type2</span>
-                            <h3>프랑켄슈타인(무삭제 완역본)</h3>
-                            <h3 style="color: #62ab00;">₩8800</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3579488%3Ftimestamp%3D20241122114223" alt="book3">
-                        </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type3</span>
-                            <h3>Essentials of M</h3>
-                            <h3 style="color: #62ab00;">₩49000</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3130560%3Ftimestamp%3D20190218000431"  alt="book4">
-                        </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type4</span>
-                            <h3>Physics for Sci</h3>
-                            <h3 style="color: #62ab00;">₩52000</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                        </div>
-                    </div>
+                    <div class="bookList_book_box bookAPI2"></div>
+                    <div class="bookList_book_box bookAPI2"></div>
+                    <div class="bookList_book_box bookAPI2"></div>
+                    <div class="bookList_book_box bookAPI2"></div>
                 </div>
             </div>
             <div id="tabs-2">
                 <div class="bookList_box">
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F1688378%3Ftimestamp%3D20230906151006" alt="book1">
+                    <div class="bookList_book_box bookAPI3"></div>
+                    <div class="bookList_book_box bookAPI3"></div>
+                    <div class="bookList_book_box bookAPI3"></div>
+                    <div class="bookList_book_box bookAPI3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider3 -->
+    <div class="slider3_container">
+        <div class="slider3_back"></div>
+        <div class="slider3_content">
+            <div class="slider3_content_text">
+                <h1>Start a new series - UP to 50% off</h1>
+                <p>we has the weekly promotion, keep up with us and you'll get the best deal to get your loved stuff. Our design reflects the purity of contemporary forms for enduring appeal.</p>
+                <div class="slider3_Time">
+                    <div>
+                        <h1>00</h1>
+                        <p>Days</p>
+                    </div>
+                    <div>
+                        <h1>00</h1>
+                        <p>Hours</p>
+                    </div>
+                    <div>
+                        <h1>00</h1>
+                        <p>Hours</p>
+                    </div>
+                    <div>
+                        <h1>00</h1>
+                        <p>Hours</p>
+                    </div>
+                </div>
+                <a href="#" class="shopButton3">SHOP NOW</a>
+            </div>
+
+            <div id="slider3">
+                <div class="swiper mySwiper3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/time_book1.png" alt="">
                         </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type1</span>
-                            <h3>Visualization</h3>
-                            <h3 style="color: #62ab00;">₩194940</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
+                        <div class="swiper-slide">
+                            <img src="./img/time_book2.png" alt="">
                         </div>
                     </div>
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F3321498%3Ftimestamp%3D20230804172050" alt="book2">
+
+                    <div class="slide_button2">
+                        <div id="buttonLeft2">
+                            <i class="fa-solid fa-angle-left"></i>
                         </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type2</span>
-                            <h3>Physics for Sci</h3>
-                            <h3 style="color: #62ab00;">₩52000</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F1706715%3Ftimestamp%3D20230918220439" alt="book3">
-                        </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type3</span>
-                            <h3>Writing Women</h3>
-                            <h3 style="color: #62ab00;">₩32460</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="bookList_book_box">
-                        <div class="bookList_img">
-                            <img src="https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F4881876%3Ftimestamp%3D20230503163533" alt="book4">
-                        </div>
-                        <div class="bookList_text">
-                            <span> ㅡ Type4</span>
-                            <h3>Seven Keys to M</h3>
-                            <h3 style="color: #62ab00;">₩33530</h3>
-                            <span> ㅡ
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </span>
+                        <div id="buttonRight2">
+                            <i class="fa-solid fa-angle-right"></i>
                         </div>
                     </div>
                 </div>
@@ -507,36 +331,45 @@
         </div>
     </div>
 
-    <!-- 버튼 배경색 변경 -->
-    <script>
-    const buttons = document.querySelectorAll('.color-button');
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        // 모든 버튼에서 active 클래스 제거
-        buttons.forEach(btn => btn.classList.remove('active'));
-        // 클릭한 버튼에 active 클래스 추가
-        button.classList.add('active');
-      });
-    });
-  </script>
-    <!-- 탭전환 -->
-  <script>
-        const tabMenu = document.querySelectorAll('.tab-menu button');
-        const tabContent = document.querySelectorAll('#tab-content > div');
-        tabMenu.forEach(function(item, idx){
-            item.addEventListener('click', function(e){
-                e.preventDefault();
-                showContent(idx);
-            });
-        });
-        function showContent(num){
-            tabContent.forEach(function(item){
-                item.style.display = 'none';
-            });
-            tabContent[num].style.display = 'block';
-        };
-    </script>
+    <!-- booklist -->
+    <div class="bookList middle">
+        <div class="bookList_title">
+            <h2>Limited Time offer</h2>
+            <a href="#" style="font-size: 18px;">VEIW MORE</a>
+        </div>
+        <div class="bookList_box">
+            <div class="bookList_book_box bookAPI4"></div>
+            <div class="bookList_book_box bookAPI4"></div>
+            <div class="bookList_book_box bookAPI4"></div>
+            <div class="bookList_book_box bookAPI4"></div>
+        </div>
+    </div>
 
+    <!-- slider4 -->
+     <div class="slider4_container">
+        <div class="slider4_back"></div>
+        <div id="slider4">
+            <div class="swiper mySwiper4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider4_content">
+                        <img src="./img/person1.jpg" alt="person" id="person_img">
+                        <div>
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit."</p>
+                            <h4>Hester Perkins</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slider4_content">
+                        <img src="./img/person2.jpg" alt="person" id="person_img">
+                    </div>
+                    <div class="swiper-slide slider4_content">
+                        <img src="./img/person3.jpg" alt="person" id="person_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
 
     <!-- footer -->
     <footer>
@@ -606,5 +439,15 @@
             </div>
         </div>
     </footer>
+
+
+
+
+    <!-- slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/27fd60e7f1.js" crossorigin="anonymous"></script>
+    <!-- <script src="./js/API.js"></script> -->
+    <script src="./js/slider.js"></script>
 </body>
 </html>
