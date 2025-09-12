@@ -5,35 +5,15 @@
 .content_middle {display: flex; align-items: center; justify-content: center;}
 
 /* slider */
-.swiper {
-      width: 100%;
-      height: 100%
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* slider */
 .swiper mySwiper{position: relative;}
 #slider {width: 100%; height: 600px;  background-color: #F4F8FB; margin-top: 21px;}
+.slide1 {display: flex; justify-content: center; align-items: center;}
 .txtContainer {width:600px; height: 100%; text-align: left; display: flex; align-items: center;}
 .ani_txt_box {width: 100%; height: 300px;display: flex; flex-wrap: wrap; align-content:space-around;}
 .ani_img_box {width:600px; height: 100%;}
 .shopButton {width:155px; height: 50px; background: none; color: black;}
 .shopButton:hover {background-color: #62ab00; color: white; transition: all 0.5s; border: none;}
-.slide_button {position: absolute; left: 5%; top:70%; width: 50px; height: 90px; z-index: 9999999;}
+.slide_button {position: absolute; left: 5%; top:70%; width: 50px; height: 90px; z-index: 1;}
 #buttonRight {width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray; display: flex; align-items: center; justify-content: center; font-size: 20px;}
 #buttonRight:hover {background-color: #62ab00; cursor: pointer;}
 #buttonLeft {width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-top: 10px;}
@@ -62,8 +42,10 @@
 .bookList_book_box{width: 270px; height: 420px; border: 1px solid gainsboro; padding: 0 15px;}
 .bookList_book_box img{width:160px; height:220px; border-radius: 5px; box-shadow: 2px 1px 10px gray; margin:10px 40px 20px;}
 .bookList_book_box p{margin-top: 10px;}
+.bookList_book_box h4{font-size:20px; color:black; float: left; margin-top: 10px;}
+.bookList_book_box h4:nth-of-type(2){font-size:20px; color:#62ab00; text-decoration: none; margin-left: 30px;}
 .bookList_book_box h3{font-size:20px; color:black; text-decoration:line-through; float: left; margin-top: 10px;}
-.bookList_book_box h3:nth-of-type(2){font-size:20px; color:#62ab00; text-decoration: none; margin-left: 20px;}
+.bookList_book_box h3:nth-of-type(2){text-decoration: none;  color:#62ab00; margin-left: 20px;}
 
 /* slider2 */
 #slider2 {width: 100%; height: 510px;  background-color: #F4F8FB; margin-top: 21px;}
@@ -93,23 +75,41 @@
 .slider3_content {position: absolute; width: 1200px; height: 550px; display: flex; align-items: center; justify-content: space-around;}
 .slider3_content_text {width: 670px; height: 350px; color: white;
 display: flex; flex-wrap: wrap; align-content: space-between;}
-.slider3_Time div {width:160px; height: 85px; padding: 10px 25px; border: 2px solid white; text-align: center; border-top: 0; border-bottom: 0; float: left;}
+.slider3_Time div {width:160px; height: 85px; padding: 10px 25px; border-left: 2px solid white; text-align: center;float: left;}
+.slider3_Time div:last-child {border-right: 2px solid white;}
 .shopButton3 {background: none; color: white; border:2px solid white; padding: 15px 25px; margin-top: 20px;}
 .shopButton3:hover {background-color: #62ab00; color: white; border: none; transition: all 0.5s;}
 
 #slider3 {width: 470px; height: 545px;}
 .slide_button2 {font-size: 30px; pointer-events: none; opacity: 0; transition: opacity 0.3s ease;}
-#buttonLeft2 {pointer-events: all; width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray;  position: absolute; left: 0%; top:50%; z-index: 9999999; text-align: center; cursor: pointer;}
-#buttonRight2 {pointer-events: all;width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray;  position: absolute; right: 0%; top:50%; z-index: 9999999; text-align: center; cursor: pointer;}
+#buttonLeft2 {pointer-events: all; width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray;  position: absolute; left: 0%; top:50%; z-index: 1; text-align: center; cursor: pointer;}
+#buttonRight2 {pointer-events: all;width: 45px; height: 45px; background-color:white; border-radius: 50%; border: 1px solid gray;  position: absolute; right: 0%; top:50%; z-index: 1; text-align: center; cursor: pointer;}
 
 #slider3:hover .slide_button2 {
     opacity: 1;
 }
 
 /* slider4 */
-.slider4_container {width: 100%; height: 465px; background-image: url("../img/person.png"); position: relative;}
+.slider4_container {width: 100%; height: 465px; background-image: url("../img/person.png"); position: relative; display: flex; justify-content: center; align-items: center;}
 .slider4_back {position: absolute; left:0; top:0; width:100%; height:100%; background-color: rgba(25, 34, 45, 0.9)}
-#slider4 {width: 970px; height:275px; background-color: gold; position: absolute;}
-.slider4_content {color: white; width: 970px; height:275px;}
-.slider4_content_img { width: 970px; height: 150px;}
+#slider4 {width: 970px; height:275px; position: absolute;}
+.slider4_content {width:600px; color: white; width: 970px; height:275px; text-align: center;}
+.slider4_content_img {width: 970px; height: 120px;}
 #person_img {width:100px; height:100px; border-radius: 50%;}
+.slider4_content_text p {line-height: 2;}
+.slider4_content_text h4{padding: 20px;}
+
+
+/* latest blogs */
+.blogs {width: 1200px; height: 650px;}
+.blogs_title {width: 100%; height: 130px; text-align: center; padding: 45px; margin-bottom: 20px;}
+.blogs_container {width: 100%; height: 500px; display: flex; align-items: center; justify-content: space-evenly;}
+.blogs_contant {width: 360px; height: 460px;}
+.blogs_contant_img {width: 100%; height: 230px; overflow: hidden; margin-bottom: 20px;}
+.blogs_contant_img img {width: 100%; height: 230px;}
+.blogs_contant_img img:hover {scale: 1.1; transition: all 0.5s ease 0s;}
+.blogs_contant_text {width:100%; height:320px;}
+.blogs_contant_text-1 {padding: 10px 0; border-top: 1px solid #919090; margin-top: 10px;}
+.blogs_contant_text-1 a {color: #919090;}
+.blogs_contant_text-1 a:first-child:hover {color: #62ab00; cursor: text;}
+.blogs_contant_text-1 a:nth-of-type(2):hover {color: #62ab00; cursor: pointer;}

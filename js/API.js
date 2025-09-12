@@ -4,18 +4,18 @@ async function bookData() {
     const paramsList = [
         new URLSearchParams({ query: "웹소설" }),
         new URLSearchParams({ query: "인기" }),
-        new URLSearchParams({ query: "베스트셀러" }),
+        new URLSearchParams({ query: "강아지" }),
         new URLSearchParams({ query: "만화" }),
     ];
 
     const bookAPI_list = ['bookAPI1', 'bookAPI2', 'bookAPI3', 'bookAPI4']
 
-    for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
         try {
-            const response = await fetch(`https://dapi.kakao.com/v3/search/book?${paramsList[i]}`, {
+            const response = await fetch(`https://dapi.kakao.com/v3/search/book?${paramsList[j]}`, {
                 method: 'GET',
                 headers: {
-                    Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"
+                    Authorization: "KakaoAK e0f80eea1a64f9ba196c16c9af6f300d"
                 }
             });
             if (!response.ok) {
@@ -24,7 +24,7 @@ async function bookData() {
 
             const data = await response.json();
 
-            const boxElements = document.querySelectorAll(`.${bookAPI_list[i]}`);
+            const boxElements = document.querySelectorAll(`.${bookAPI_list[j]}`);
             console.log(boxElements.length)
 
             for (let i = 0; i < boxElements.length; i++) {
@@ -46,15 +46,25 @@ async function bookData() {
                 p.textContent = doc.contents.substring(0, 50) + '...';;
                 box.appendChild(p);
 
-                // <h3> 책 가격
-                const price = document.createElement("h3");
-                price.textContent = doc.price;
-                box.appendChild(price);
-
-                // <h3> 판매 가격
-                const sale_price = document.createElement("h3");
-                sale_price.textContent = doc.sale_price;
-                box.appendChild(sale_price);
+                if(j==1|j==2){
+                    // <h4> 책 저자
+                    const authors = document.createElement("h4");
+                    authors.textContent = doc.authors;
+                    box.appendChild(authors);
+                    // <h4> 판매 가격
+                    const sale_price = document.createElement("h4");
+                    sale_price.textContent = doc.sale_price;
+                    box.appendChild(sale_price);
+                }else{
+                    // <h3> 책 가격
+                    const price = document.createElement("h3");
+                    price.textContent = doc.price;
+                    box.appendChild(price);
+                    // <h3> 판매 가격
+                    const sale_price = document.createElement("h3");
+                    sale_price.textContent = doc.sale_price;
+                    box.appendChild(sale_price);
+                }
             };
 
         } catch (error) {

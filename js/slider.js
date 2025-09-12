@@ -33,15 +33,15 @@ const swiper3 = new Swiper(".mySwiper3", {
 });
 
 // slider4
-// const swiper4 = new Swiper(".mySwiper4", {
-//     slidesPerView: 1,
-//     spaceBetween: 30,
-//     loop: true,
-//     autoplay: {
-//                     delay: 10,
-//                     disableOnInteraction: false,
-//                 },
-// });
+const swiper4 = new Swiper(".mySwiper4", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+});
 
 
 // 북리스트 버튼
