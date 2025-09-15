@@ -44,6 +44,17 @@ const swiper4 = new Swiper(".mySwiper4", {
 });
 
 
+//booklist slide
+const swiper5 = new Swiper(".mySwiper5", {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    loop : true,
+    navigation: {
+        nextEl: "#buttonRight3",
+        prevEl: "#buttonLeft3",
+    },
+});
+
 // 북리스트 버튼
 const buttons = document.querySelectorAll('.color-button');
 buttons.forEach(button => {

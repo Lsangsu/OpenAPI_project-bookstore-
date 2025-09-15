@@ -5,7 +5,7 @@ async function bookData() {
         new URLSearchParams({ query: "웹소설" }),
         new URLSearchParams({ query: "인기" }),
         new URLSearchParams({ query: "강아지" }),
-        new URLSearchParams({ query: "만화" }),
+        new URLSearchParams({ query: "커피" }),
     ];
 
     const bookAPI_list = ['bookAPI1', 'bookAPI2', 'bookAPI3', 'bookAPI4']
@@ -51,11 +51,25 @@ async function bookData() {
                     const authors = document.createElement("h4");
                     authors.textContent = doc.authors;
                     box.appendChild(authors);
+                    // 별점
+                    const Star = document.createElement("p");
+                    const rating = Math.floor(Math.random() * 5) +1;
+                    let FullStar = "★" .repeat(rating);
+                    let EmptyStar = "☆" .repeat(5-rating); 
+                    Star.textContent = FullStar + EmptyStar;
+                    Star.style.color = "gold";
+                    Star.style.fontSize = "20px";
+                    box.appendChild(Star);
+                }else if(j==3){
+                    // <h4> 책 저자
+                    const authors = document.createElement("h4");
+                    authors.textContent = doc.authors;
+                    box.appendChild(authors);
                     // <h4> 판매 가격
                     const sale_price = document.createElement("h4");
                     sale_price.textContent = doc.sale_price;
                     box.appendChild(sale_price);
-                }else{
+                } else{
                     // <h3> 책 가격
                     const price = document.createElement("h3");
                     price.textContent = doc.price;
