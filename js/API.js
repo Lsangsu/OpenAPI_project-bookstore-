@@ -2,10 +2,10 @@
 
 async function bookData() {
     const paramsList = [
-        new URLSearchParams({ query: "웹소설" }),
-        new URLSearchParams({ query: "인기" }),
-        new URLSearchParams({ query: "강아지" }),
-        new URLSearchParams({ query: "커피" }),
+        new URLSearchParams({ query: "Dav Pilkey" }),
+        new URLSearchParams({ query: "Don brown" }),
+        new URLSearchParams({ query: "Cormac McCarthy" }),
+        new URLSearchParams({ query: "US games systems" }),
     ];
 
     const bookAPI_list = ['bookAPI1', 'bookAPI2', 'bookAPI3', 'bookAPI4']
@@ -22,14 +22,26 @@ async function bookData() {
                 throw new Error(`HTTP 오류! 상태 코드: ${response.status}`);
             }
 
-            const data = await response.json();
+            const Maindata = await response.json();
+            const origin = Maindata.documents;
+  
+            function isMostlyEnglish(text, threshold = 0.7) {
+                const englishChars = text.match(/[a-zA-Z]/g) || [];
+                const totalChars = text.replace(/\s/g, '');
+                return totalChars.length > 0 && (englishChars.length / totalChars.length) >= threshold;
+
+            }
+
+            const data = origin.filter((val)=>{
+                         return val.contents && isMostlyEnglish(val.contents);
+            })
 
             const boxElements = document.querySelectorAll(`.${bookAPI_list[j]}`);
-            console.log(boxElements.length)
 
             for (let i = 0; i < boxElements.length; i++) {
-                const doc = data.documents[i];
+                const doc = data[i];
                 const box = boxElements[i];
+
 
                 // <img>
                 const img = document.createElement("img");
