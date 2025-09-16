@@ -1,11 +1,10 @@
 //oepnAPI
-
 async function bookData() {
     const paramsList = [
         new URLSearchParams({ query: "thrones" }),
-        new URLSearchParams({ query: "Dav Pilkey" }),
+        new URLSearchParams({ query: "Jane Austen" }),
         new URLSearchParams({ query: "Steven Moffat" }),
-        new URLSearchParams({ query: "The Lord of the Rings" }),
+        new URLSearchParams({ query: "the Lord the Rings" }),
     ];
 
     const bookAPI_list = ['bookAPI1', 'bookAPI2', 'bookAPI3', 'bookAPI4']
@@ -94,6 +93,69 @@ async function bookData() {
 
 
 bookData();
+
+
+//SUB API
+
+async function bookData2() {
+    const params = new URLSearchParams({ 
+        query: "the Lord the Rings" })
+    ;
+
+        try {
+            const response = await fetch(`https://dapi.kakao.com/v3/search/book?${params}`, {
+                method: 'GET',
+                headers: {
+                    Authorization: "KakaoAK e0f80eea1a64f9ba196c16c9af6f300d"
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP 오류! 상태 코드: ${response.status}`);
+            }
+
+
+            // 영어가 많이 있는 자료만 뽑아서 출력하기
+            const Maindata = await response.json();
+            const origin = Maindata.documents;
+            function isMostlyEnglish(text, threshold = 0.7) {
+                const englishChars = text.match(/[a-zA-Z]/g) || [];
+                const totalChars = text.replace(/\s/g, '');
+                return totalChars.length > 0 && (englishChars.length / totalChars.length) >= threshold;
+
+            }
+            const data = origin.filter((val)=>{
+                         return val.contents && isMostlyEnglish(val.contents);
+            })
+
+            const S_M_IMG = document.querySelectorAll(`.sub_main_img div`);
+            const S_M_SLIDER = document.querySelectorAll(`.sub_bookList_box button`);
+
+            for (let i = 0; i < 5; i++) {
+                const doc = data[i];
+                const box1 = S_M_IMG[i];
+                const box2 = S_M_SLIDER[i];
+
+                // <img>
+                const img1 = document.createElement("img");
+                img1.src = doc.thumbnail;
+                img1.style.width = '350px'
+                box1.appendChild(img1);
+
+                // <img>
+                const img2 = document.createElement("img");
+                img2.src = doc.thumbnail;
+                img2.style.width = '110px'
+                box2.appendChild(img2);
+
+            };
+
+        } catch (error) {
+            console.log('에러발생', error);
+        }
+    }
+
+
+bookData2();
 
 
 
