@@ -2,10 +2,10 @@
 
 async function bookData() {
     const paramsList = [
+        new URLSearchParams({ query: "thrones" }),
         new URLSearchParams({ query: "Dav Pilkey" }),
-        new URLSearchParams({ query: "Don brown" }),
-        new URLSearchParams({ query: "Cormac McCarthy" }),
-        new URLSearchParams({ query: "US games systems" }),
+        new URLSearchParams({ query: "Steven Moffat" }),
+        new URLSearchParams({ query: "The Lord of the Rings" }),
     ];
 
     const bookAPI_list = ['bookAPI1', 'bookAPI2', 'bookAPI3', 'bookAPI4']
@@ -22,16 +22,16 @@ async function bookData() {
                 throw new Error(`HTTP 오류! 상태 코드: ${response.status}`);
             }
 
+
+            // 영어가 많이 있는 자료만 뽑아서 출력하기
             const Maindata = await response.json();
             const origin = Maindata.documents;
-  
             function isMostlyEnglish(text, threshold = 0.7) {
                 const englishChars = text.match(/[a-zA-Z]/g) || [];
                 const totalChars = text.replace(/\s/g, '');
                 return totalChars.length > 0 && (englishChars.length / totalChars.length) >= threshold;
 
             }
-
             const data = origin.filter((val)=>{
                          return val.contents && isMostlyEnglish(val.contents);
             })
@@ -55,7 +55,7 @@ async function bookData() {
 
                 // <p> 내용 일부
                 const p = document.createElement("p");
-                p.textContent = doc.contents.substring(0, 50) + '...';;
+                p.textContent = doc.contents.substring(0, 50) + '...';
                 box.appendChild(p);
 
                 if(j==1|j==2){
@@ -63,6 +63,7 @@ async function bookData() {
                     const authors = document.createElement("h4");
                     authors.textContent = doc.authors;
                     box.appendChild(authors);
+                }else if(j==3){
                     // 별점
                     const Star = document.createElement("p");
                     const rating = Math.floor(Math.random() * 5) +1;
@@ -72,15 +73,7 @@ async function bookData() {
                     Star.style.color = "gold";
                     Star.style.fontSize = "20px";
                     box.appendChild(Star);
-                }else if(j==3){
-                    // <h4> 책 저자
-                    const authors = document.createElement("h4");
-                    authors.textContent = doc.authors;
-                    box.appendChild(authors);
-                    // <h4> 판매 가격
-                    const sale_price = document.createElement("h4");
-                    sale_price.textContent = doc.sale_price;
-                    box.appendChild(sale_price);
+                    
                 } else{
                     // <h3> 책 가격
                     const price = document.createElement("h3");
