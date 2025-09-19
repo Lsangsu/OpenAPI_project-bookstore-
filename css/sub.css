@@ -8,7 +8,7 @@
 .sub_nav {width: 100%; height: 80px; background-color: rgba(0, 0, 0, 0.1); font-size: 18px;  margin-top: 20px;}
 
 /* Sub main */
-.sub_main {width: 1200px; height: 1000px; display: flex; justify-content: space-evenly; margin: 10px auto;}
+.sub_main {width: 1200px; height: 900px; display: flex; justify-content: space-evenly; margin: 10px auto;}
 .sub_main_img_container {width: 580px; height: 800px;}
 .sub_main_img {width: 570px; height: 570px; margin: 10px 5px; padding: 10px 90px;}
 .sub_main_text_container  {width: 580px; height: 900px;}
