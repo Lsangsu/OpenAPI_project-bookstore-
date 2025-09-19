@@ -195,3 +195,19 @@ async function sub_bookList() {
 
 
 sub_bookList()
+
+//텍스트 파일 불러오기
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        const response = await fetch("../sub_text/txt1.txt");
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        const data = await response.text();
+        console.log(data);
+        document.getElementById("sub_txt_1").innerHTML = data;
+    } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
+    }
+});
+
