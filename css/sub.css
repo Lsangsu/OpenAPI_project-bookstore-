@@ -8,19 +8,44 @@
 .sub_nav {width: 100%; height: 80px; background-color: rgba(0, 0, 0, 0.1); font-size: 18px;  margin-top: 20px;}
 
 /* Sub main */
-.sub_main {width: 1200px; height: 1000px; background-color: gold; display: flex; justify-content: space-evenly; margin: 10px auto;}
-.sub_main_img_container {width: 580px; height: 800px; background-color: aqua;}
-.sub_main_img {width: 570px; height: 570px; margin: 10px 5px; background-color: #62ab00;}
-.sub_main_text_container  {width: 580px; height: 1000px; background-color: aqua;}
+.sub_main {width: 1200px; height: 1000px; display: flex; justify-content: space-evenly; margin: 10px auto;}
+.sub_main_img_container {width: 580px; height: 800px;}
+.sub_main_img {width: 570px; height: 570px; margin: 10px 5px; padding: 10px 90px;}
+.sub_main_text_container  {width: 580px; height: 900px;}
 
+/* sub main slider */
 .sub_bookList_slide {width: 560px; height: 210px; position: relative; display: flex; align-items: center; margin: 0 15px;}
 #sub_buttonLeft{width: 20px; height: 20px; background-color: white; border: 1px solid #4444446c; border-radius: 50%; position: absolute; z-index: 2; top: 90px; left: -15px; cursor: pointer;}
 #sub_buttonright{width: 20px; height: 20px; background-color: white; border: 1px solid #4444446c; border-radius: 50%; position: absolute; z-index: 2; top: 90px; right: -5px; cursor: pointer;}
 .bookAPI5 {background:none; border: 0;}
+.sub-button {border: none;}
 .active2 {border: 1px solid black;}
 .sub_main_img > div{display: none;}
 .sub_main_img > div:first-child{display: block;}
 
+.sub_bookAPI1 img{box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.534);}
+.sub-button img {box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.534);}
+
+/* sub main text */
+.subTab div {display: none;}
+.subTab div:first-child {display: block;}
+.S_M_T_table {border-collapse: collapse; width: 500px; border-width: 2px; border-style: solid; border-color: black; border-image: initial;}
+.S_M_T_table th {width: 165px; border-width: 1px; border-style: solid; border-color: black; padding: 5px;}
+.S_M_T_table td {border-width: 1px; border-style: solid; border-color: black; padding: 5px;}
+
+.sub_main_text_bottom {width: 450px; margin-top: 50px;}
+.S_M_T_B1 {display: flex;}
+.S_M_T_B1_1 { width: 90px; height: 60px; border: 1px solid rgba(0, 0, 0, 0.205);}
+.S_M_T_B1_2 {width: 175px; height: 60px; background-color: black; color: white; text-align: center; padding: 15px; font-size: 18px; margin-left: 10px;}
+.S_M_T_B1_3 { font-size: 25px; padding: 10px;}
+
+.S_M_T_B2_1 {width: 360px; height: 62px; background-color: #1990C6; color: white; font-size: 25px; padding: 10px; text-align: center; margin: 50px 0;}
+.sub_main_text_bottom2 p {font-weight: 500; margin-top: 15px; font-size: 18px;}
+.sub_main_text_bottom2 p:nth-of-type(2) img {width: 20px; height: 20px; margin-bottom: -3px; margin-left: 10px;}
+.S_M_T_B2_2 {width: 400px; height: 50px; display: flex; justify-content: space-evenly;}
+.S_M_T_B2_2 div {width: 60px; height: 40px; border: 1px solid rgba(0, 0, 0, 0.164); background-color: none; border-radius: 10%; display: flex; justify-content: center; align-items: center;}
+.S_M_T_B2_2 div img {width: 30px; height: 30px;}
+.S_M_T_B2_2 div:last-child img {width: 45px; height: 45px;}
 
 
 /* bookList */
